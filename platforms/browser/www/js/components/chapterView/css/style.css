@@ -1,0 +1,114 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 21, 2017, 10:26:54 PM
+    Author     : eve
+*/
+
+.ChapterViewWrapepr {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    padding: .5em;
+}
+
+.ChapterViewInnerWrapper {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    padding: .5em;
+    padding-right: 0;
+}
+
+.ChapterViewInner {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    padding-right: .5em;
+    overflow: auto;
+}
+
+.ChapterViewHeader {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.ChapterViewIntro p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.ChapterViewIntro {
+    margin-bottom: .8em;
+}
+
+.ChapterViewExcersizeBlock {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: .3em;
+    border: 1px solid silver;
+    margin-bottom: 1.5em;
+    border-radius: 1%;
+}
+
+.ChapterViewImageWrapper {
+    box-sizing: border-box;
+}
+
+.ChapterViewImageWrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+}
+
+.ChapterViewExcersizeBlock {
+    width: 100%;
+    float: left;
+}
+
+.ChapterViewExcerizes {
+    overflow: hidden;
+}
+
+.ChapterViewExcersizeName {
+    font-size: 1.4em;
+}
+
+.ChapterViewGoTo {
+    line-height: 1.7em;
+    text-align: right;
+    color: #760000;
+    font-size: 1.3em;
+    padding-right: .5em;
+    margin-bottom: .4em;
+    font-weight: bold;
+}
+
+.ChapterViewExcersizeName {
+    height: 4em;
+    max-height: 4em;
+    line-height: 1.3em;
+    overflow: hidden;
+}
+
+.ChapterViewExcersizeName {
+    margin-top: .3em;
+}
+
+.ChapterViewExcersizeBlock {
+    max-width: 750px;
+}
+
+.ChapterViewWrapepr {
+    padding: 0!important;
+}
+
+.ChapterViewInnerWrapper {
+    padding: 0!important;
+    overflow: auto!important;
+}

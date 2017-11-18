@@ -1,0 +1,327 @@
+.MenuBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box;
+    padding-right: 10px;
+    width: 0;
+    max-width: 80%;
+    min-width:10px;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    transition: all .3s;        
+}
+
+.MenuBackdrop,.MenuBackdrop div,.MenuBackdrop ul,
+.MenuBackdrop span,.MenuBackdrop li,
+.MenuBackdrop svg,.MenuBackdrop img{
+    user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+}
+.MenuBackdrop.MenuOpened{
+    width:20em;
+}
+.MenuBackdrop.notransition{
+    transition: none;
+} 
+
+.MenuComponentContent {
+    position: relative;
+    width: 100%;
+    max-width: 19em;
+    height: 100%;
+    max-height: 100%;    
+    box-sizing: border-box;    
+}
+
+.MenuBackdrop.MenuOpened .MenuComponentContent {
+    border-right:1px solid silver;
+}
+
+.EFOWindowContent.MenuWindowContent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    height: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    min-width:18.5em;
+}
+
+.MenuMainMenu {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.MenuMenuHeaderPart {
+    background: orange;
+    position: relative;
+}
+
+.MenuMenuHeaderContent {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1.6em;
+    color: white;
+    padding-right: 1em;
+    box-sizing: border-box;
+}
+
+.MenuMenuHeaderLogo {
+    height: 110px;
+}
+
+.MenuHeaderUserDisplay {
+    height: 1.3em;
+    white-space: nowrap;
+    line-height: 1.3em;
+}
+
+.MenuHeaderPointDisplay {
+    line-height: 1.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 1.3em;
+}
+
+.EFOWindowLoader.MenuWindowLoader {
+    font-size: .4em;
+}
+
+.MenuMenuItemsPart {
+    overflow: hidden;
+    list-style: none;
+}
+
+ul.MenuMenuList {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    padding-left: 1.6em;
+    box-sizing: border-box;
+}
+
+ul.MenuMenuList .MenuMenuIcon {
+    display: inline-block;
+    overflow: hidden;
+    width: 1.5em;
+    height: 1.5em;
+}
+ul.MenuMenuList .MenuMenuIcon svg{
+    width:100%;
+    height:100%;
+    fill:#444343;
+}
+
+
+ul.MenuMenuList li {
+    white-space: nowrap;
+    padding-left: 3em;
+    position: relative;
+    display: block;
+    width:100%;
+    box-sizing:border-box;
+    position:relative;
+    overflow:hidden;
+    line-height: 2.5em;
+    transition: all .3s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+span.MenuMenuIcon {
+    position: absolute;
+    left: .25em;
+    top: 50%;
+    margin-top: -.75em;
+}
+
+.MenuLowUnderBackdrop {
+    z-index: 9;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    transition: all .3s;
+    max-width: 0;
+}
+
+.MenuLowUnderBackdrop.MenuOpened {
+    max-width: 5000px;
+}
+
+.MenuMainMenu {
+    background: white;
+}
+
+ul.MenuMenuList li:hover {
+    background: whitesmoke;
+}
+ul.MenuMenuList li:hover  .MenuMenuIcon svg{
+    width:100%;
+    height:100%;
+    fill:#442020;
+}
+
+li.MenuShowOffline.OM-Online {
+    display: none;
+}
+
+li.MenuShowOnline.OM-Offline {
+    display: none;
+}
+
+
+.MenuMenuHeaderLogo {
+    max-width: 100px;
+    max-height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 5.5em;
+    height: 5.5em;
+}
+
+.MenuMenuHeaderLogo img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+}
+
+.MenuHeaderUserDisplay {
+    margin-top: .5em;
+    line-height: 1.5em;
+    max-width: 100%;
+    overflow: hidden;
+    height: 1.5em;
+    white-space: nowrap;
+    font-size: .9em;
+}
+
+.MenuHeaderBrandDisplay {
+    height: 1.5em;
+    line-height: 1.5em;
+    max-height: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: .9em;
+}
+
+.MenuHeaderPointDisplay {
+    line-height: 1.3em;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 1.3em;
+    font-size: .9em;
+}
+.MenuBackdrop .MenuToggler{
+    position:absolute;
+    width:1.5em;
+    top:0;right:0;
+    height: 3em;
+    cursor: pointer;
+}
+body .MenuBackdrop{
+    min-width: 1.5em;
+    padding-right: 1.5em;
+}
+
+.Menutoggler {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5em;
+    height: 3em;
+    cursor: pointer;
+}
+
+
+.MenuMenuHeaderPart {
+    background: #760000!important;
+}
+
+ul.MenuMenuList li {
+    padding-left: 0;
+    margin-top: .8em;
+    margin-bottom: .5em;
+}
+
+ul.MenuMenuList {
+    padding-top: 1em;
+}
+
+ul.MenuMenuList li img {
+    margin-right: 1em;
+    vertical-align: middle;
+}
+
+.MenuMenuHeaderLogo i {
+    font-size: 3em;
+    background: white;
+    color: #760000;
+    line-height: 1.2em;
+}
+
+.MenuMenuHeaderLogo {
+    text-align: center;
+    line-height: 4em;
+    background: white;
+    width: 4em;
+    height: 4em;
+    margin-top: 1em;
+}
+
+
+ul.MenuMenuList li {
+    position: relative;
+    box-sizing: border-box;
+    padding-left: 3em;
+}
+
+ul.MenuMenuList li .MenuImage {
+    position: absolute;
+    top: .25em;
+    left: 0;
+    height: 2em;
+    width: 2em;
+}
+
+ul.MenuMenuList li .MenuImage svg {
+    width: 100%;
+    height: 100%;
+    fill: #760000;
+}
+
+.MenuImage {
+    box-sizing: border-box;
+    padding: .16em;
+}
+
+.MenuBackdrop.MenuOpened {
+    z-index: 100;
+}
+
+.MenuLowUnderBackdrop.MenuOpened {
+    z-index: 99;
+}
+
+
+.Menutoggler {
+    display: none;
+}

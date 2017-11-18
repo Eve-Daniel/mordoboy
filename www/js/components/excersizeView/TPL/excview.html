@@ -1,0 +1,24 @@
+<div class="{{getCssClass}}Tab {{getCssClass}}TabOpen" data-command="settab">
+    <div class="{{getCssClass}}TabHeader">{{#_TT}}{{getCssClass}}TrainingTabheader{{/_TT}}</div>
+    <div class="{{getCssClass}}TabBody">
+        {{#images}}
+        <div class="{{getCssClass}}ImageWrapper" data-xindex="{{xindex}}" data-yindex="{{yindex}}" data-index="{{index}}">
+            <img src="{{#mkurl}}/PImageFly/EXC/N{{id}}/{{indexText}}/600_450.gif" />            
+        </div>
+        {{/images}}        
+        {{>navigation}}
+    </div>
+</div>
+<div class="{{getCssClass}}Tab" data-command="settab">
+    <div class="{{getCssClass}}TabHeader">{{#_TT}}{{getCssClass}}InfoTabheader{{/_TT}}</div>
+    <div class="{{getCssClass}}TabBody">
+        
+    </div>
+</div>
+
+<div class="{{getCssClass}}Tab" data-command="settab">
+    <div class="{{getCssClass}}TabHeader">{{#_TT}}{{getCssClass}}ExamplesTabheader{{/_TT}}</div>
+    <div class="{{getCssClass}}TabBody">
+        
+    </div>
+</div>

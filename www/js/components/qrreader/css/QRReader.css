@@ -1,0 +1,196 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01.05.2017, 2:28:24
+    Author     : Eve
+*/
+
+.QrreaderBackdrop {
+    background: white;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+}
+
+.QrreaderComponentContent {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.QrreaderWrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.QrreaderFormWrapper {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 35em;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+
+.QrreaderFormWrapper {
+    position: relative;
+    padding-bottom: 4em;
+}
+
+.QrreaderFooterWrapper {
+    height: 4em;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 4em;
+}
+
+.QrreaderPreviewWrapper {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.QrreaderPreview {
+    width: 100%!important;
+    height: 100%!important;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.QrreaderPreview video {
+    width: 100%;
+    height: 100%;
+}
+
+span.QrreaderButton {
+    background: #760000;
+    color: white;
+    line-height: 2em;
+    display: inline-block;
+    padding: 0 1.5em;
+    cursor: pointer;
+}
+
+.qrreaderPreview {
+    position: relative;
+}
+
+.QrreaderCamSwitch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4em;
+    height: 4em;
+    background: white;
+    box-sizing: border-box;
+    border: 1px solid #760000;
+    padding: .3em;
+    cursor: pointer;
+}
+
+.QrreaderCamSwitch svg {
+    width: 100%;
+    height: 100%;
+    fill: #760000;
+}
+
+.QrreaderCamWrapper,.qrreaderCamWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.qrreaderCamWrapper canvas,
+.QrreaderCamWrapper canvas{
+    /* width: 100%; */
+    max-height: 100%;
+    -zz-max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+}
+.qrreaderCameraError {
+    text-align: center;
+    color: white;
+    background: crimson;
+    padding: 2em;
+}
+
+
+body.NATCAM_ACTIVE {
+    background-color: transparent;
+}
+
+body.NATCAM_ACTIVE>div,
+body.NATCAM_ACTIVE #boxapp>div,
+body.NATCAM_ACTIVE div#appContent>div{
+    opacity: 0!important;
+}
+
+body.NATCAM_ACTIVE div#appContent,
+body.NATCAM_ACTIVE #boxapp,
+body.NATCAM_ACTIVE div#appContent .qrreaderBackdrop {
+    opacity: 1!important;
+    background: transparent!important;
+}
+
+body.NATCAM_ACTIVE #boxapp,
+body.NATCAM_ACTIVE div#appContent {
+    opacity: 1!important;
+}
+
+body.NATCAM_ACTIVE div#appContent>div {
+    opacity: 0!important;
+}
+
+body.NATCAM_ACTIVE div#appContent div.qrreaderBackdrop {
+    opacity: 1!important;
+    background: transparent;
+}
+
+body.NATCAM_ACTIVE .qrreaderComponentContent {
+    background: transparent;
+}
+
+body.NATCAM_ACTIVE .qrreaderPreviewWrapper {
+    background: transparent;
+}
+
+body.NATCAM_ACTIVE .QrreaderFooterWrapper {
+    background: white!important;
+    opacity:1!important;
+}
+
+body.NATCAM_ACTIVE .qrreaderPreviewWrapper {
+    display: block;
+}
+
+body.NATCAM_ACTIVE .qrreaderCamWrapper {
+    display: none;
+}
+
+body.NATCAM_ACTIVE div#appContent .FlatControllerQrreaderWrapper {
+    opacity: 1!important;
+    background: transparent;
+}
+

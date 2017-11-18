@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filterList>
+    <property in="email" filters="Trim,NEString,EmailMatch" />    
+    <property in="password" filters="Trim,NEString,PasswordMatch" />    
+</filterList>

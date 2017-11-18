@@ -1,0 +1,12 @@
+{{#data.tree.items}}
+{{#published}}
+<div class="{{getCssClass}}Section container">
+    <h2>{{name}}</h2>
+    <div class="{{getCssClass}}SectionContentV2 row">
+        {{registerSection}}
+        {{>lessons}}
+    </div>
+</div>
+{{/published}}
+{{/data.tree.items}}
+{{updateFullPrice}}

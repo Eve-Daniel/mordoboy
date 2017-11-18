@@ -1,0 +1,11 @@
+<div class="{{getCssClass}}Items" data-role="support">
+{{#data.tree.items}}
+{{#published}}
+<div class="{{getCssClass}}BookSection" data-command="openNavigator" data-root="{{id}}" title="{{name}}">
+    <img src="{{#mkurl}}/ImageFly/CHAP/{{key}}/200_200.png{{/mkurl}}">    
+</div>
+{{/published}}
+{{/data.tree.items}}
+<div class="{{getCssClass}}Center"><img src="img/center.png" /></div>
+</div>
+{{updateFullPrice}}

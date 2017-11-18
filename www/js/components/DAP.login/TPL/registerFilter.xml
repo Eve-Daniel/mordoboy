@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filterList>
+    <property in="email" filters="Trim,NEString,EmailMatch" />
+    <property in="name" filters="Strip,Trim,NEString" />
+    <property in="password" filters="Trim,NEString,PasswordMatch" />
+    <property in="agreement" filters="Boolean,RequiredTrue" />
+    <property in="subscribe" filters="Boolean,DefaultTrue" />
+</filterList>

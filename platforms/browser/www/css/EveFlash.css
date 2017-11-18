@@ -1,0 +1,248 @@
+.EveFlash{
+    position:fixed;
+    margin:0;
+    margin-top:5px;
+    margin-bottom:5px;
+    border:1px solid silver;    
+    box-shadow: 3px 3px 10px black;
+    border-radius: 0px;   
+    min-width:10%;
+    max-width:90%;
+    background-color:white;
+    z-index:50;
+    
+    display: block;
+    width: auto;
+    height: auto;    
+    line-height:normal;
+    vertical-align:auto;
+    background-image: none;    
+}
+.EveFlash .EveFlashClose{
+    position:absolute;
+    right:0px;
+    top:0px;
+    width:16px;
+    height:16px;    
+    background-position:-95px -64px;
+    z-index:2;
+    cursor:pointer;
+    display:none;
+    margin-top:2px;
+    margin-right:2px;
+}
+.EveFlash .EveFlashImageSmall{
+    position:absolute;
+    left:0px;
+    top:0px;
+    width:16px;
+    height:16px;    
+    background-position: 0px 0px;
+    z-index:2;
+    display:none;
+    margin-top:3px;
+    margin-left: 2px;
+}
+.EveFlash .EveFlashTitle{
+    display:block;
+    padding:3px 3px;
+    background-color:white;
+    border-bottom:1px solid silver;
+    white-space: nowrap;
+    overflow: hidden;
+    color:black;
+    font-size:14px;
+}
+.EveFlash .EveFlashContainer{
+    padding:10px;
+}
+.EveFlash .EveFlashImage{    
+    float:left;
+    width:64px;
+    height:64px;
+    background-position: 0px 0px;
+    margin-right:20px;
+    display:none;
+}
+.EveFlash .EveFlashBody{
+    display:block;
+    margin-left:0px;
+    color:black;
+
+}
+.EveFlash .EveFlashClearfix{clear:both;border:none;margin:0;padding:0;outline:none;max-height: 0px;height:0px;min-height: 0px;overflow: hidden;}
+
+.EveFlash.EveFlashTrans{
+    transition:all 0.5s;
+}
+
+/*картинки*/
+.EveFlash .EveFlashImageSmall,.EveFlash .EveFlashImage,.EveFlash .EveFlashClose{
+    background-image:url('./sprite/EveFlash.png');
+}
+.EveFlash.image-exclamation-round .EveFlashImage{
+    display:block;
+    background-position:-63px 0px;
+}
+.EveFlash.image-stop .EveFlashImage{
+    display:block;
+    background-position:-127px 0px;
+}
+.EveFlash.image-info .EveFlashImage{
+    display:block;
+    background-position:-191px 0px;
+}
+.EveFlash.image-dead .EveFlashImage{
+    display:block;
+    background-position:-255px 0px;
+}
+.EveFlash.image-exclamation .EveFlashImage{
+    display:block;
+    background-position:-319px 0px;
+}
+.EveFlash.image-bubble .EveFlashImage{
+    display:block;
+    background-position:-383px 0px;
+}
+.EveFlash.image-ok .EveFlashImage{
+    display:block;
+    background-position:-447px 0px;
+}
+/*Иконки*/
+.EveFlash.icon-info .EveFlashImageSmall{
+    display:block;
+    background-position:-63px -64px;
+}
+.EveFlash.icon-exclamation .EveFlashImageSmall{
+    display:block;
+    background-position:-79px -64px;
+}
+
+
+.EveFlash[class*=icon] .EveFlashImageSmall{
+    display:block;        
+}
+.EveFlash[class*=icon] .EveFlashTitle{
+    padding-left:23px;        
+}
+
+.EveFlash.EveFlashClosable .EveFlashTitle{
+    padding-right:23px;
+}
+.EveFlash.EveFlashClosable .EveFlashClose{
+    display:block;
+}
+.EveFlash[class*=image] .EveFlashImage{
+    display:block;        
+}
+.EveFlash[class*=image] .EveFlashBody{
+    margin-left:84px; 
+    min-width:160px;
+}
+/*цвета*/
+.EveFlash.EveFlash-status-red{
+    border:1px solid red;
+}
+.EveFlash.EveFlash-status-red .EveFlashTitle{
+    color:white;
+    background-color:red;
+}
+.EveFlash.EveFlash-status-red .EveFlashBody{
+    color:red;
+}
+.EveFlash.EveFlash-status-red .EveFlashImage{
+    background-color:red;    
+}
+
+.EveFlash.EveFlash-status-orangered{
+    border:1px solid orangered;
+}
+.EveFlash.EveFlash-status-orangered .EveFlashTitle{
+    color:white;
+    background-color:orangered;
+}
+.EveFlash.EveFlash-status-orangered .EveFlashBody{
+    color:orangered;
+}
+.EveFlash.EveFlash-status-orangered .EveFlashImage{
+    background-color:orangered;    
+}
+
+
+.EveFlash.EveFlash-status-orange{
+    border:1px solid orange;
+}
+.EveFlash.EveFlash-status-orange .EveFlashTitle{
+    color:white;
+    background-color:orange;
+}
+.EveFlash.EveFlash-status-orange .EveFlashBody{
+    color:orange;
+}
+.EveFlash.EveFlash-status-orange .EveFlashImage{
+    background-color:orange;    
+}
+
+.EveFlash.EveFlash-status-ntl{
+    border:1px solid #00acc8;
+}
+.EveFlash.EveFlash-status-ntl .EveFlashTitle{
+    color:white;
+    background-color:#00acc8;
+}
+.EveFlash.EveFlash-status-ntl .EveFlashBody{
+    color:#00acc8;
+}
+.EveFlash.EveFlash-status-ntl .EveFlashImage{
+    background-color:#00acc8;    
+}
+
+.EveFlash.EveFlash-status-blue{
+    border:1px solid blue;
+}
+.EveFlash.EveFlash-status-blue .EveFlashTitle{
+    color:white;
+    background-color:blue;
+}
+.EveFlash.EveFlash-status-blue .EveFlashBody{
+    color:blue;
+}
+.EveFlash.EveFlash-status-blue .EveFlashImage{
+    background-color:blue;    
+}
+
+
+.EveFlash.EveFlash-status-green{
+    border:1px solid green;
+}
+.EveFlash.EveFlash-status-green .EveFlashTitle{
+    color:white;
+    background-color:green;
+}
+.EveFlash.EveFlash-status-green .EveFlashBody{
+    color:green;
+}
+.EveFlash.EveFlash-status-green .EveFlashImage{
+    background-color:green;    
+}
+.EveFlashBody ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.EveFlash.EveFlash-status-crimson{
+    border:1px solid crimson;
+}
+.EveFlash.EveFlash-status-crimson .EveFlashTitle{
+    color:white;
+    background-color:crimson;
+}
+.EveFlash.EveFlash-status-crimson .EveFlashBody{
+    color:crimson;
+}
+.EveFlash.EveFlash-status-crimson .EveFlashImage{
+    background-color:crimson;    
+}
+
+
+

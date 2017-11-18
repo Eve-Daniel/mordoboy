@@ -1,0 +1,32 @@
+<div class="{{getCssClass}}Wrapper">
+    <div id="{{getCssClass}}nas_open" class="{{getCssClass}}close_block">
+        <div class="form_nas">
+            <div class="kiloa">
+                <label for="{{getCssClass}}nas_lang">{{#_TT}}{{getCssClass}}LangLabel{{/_TT}}</label>
+                <select id="{{getCssClass}}nas_lang" data-field="lang"></select>
+            </div>
+            <div class="kiloa">
+                <label for="{{getCssClass}}nas_user">{{#_TT}}{{getCssClass}}NameLabel{{/_TT}}</label>
+                <input type="text" placeholder="{{#_TT}}{{getCssClass}}NamePlaceholder{{/_TT}}" id="{{getCssClass}}nas_user" data-field="name" />
+            </div>
+            <div class="kiloa">
+                <label for="{{getCssClass}}nas_uemail">{{#_TT}}{{getCssClass}}EmailLabel{{/_TT}}</label>
+                <input type="email" data-field="email" placeholder="{{#_TT}}{{getCssClass}}EmailPlaceholder{{/_TT}}" id="{{getCssClass}}nas_email" />
+            </div>
+            <div class="kiloa">
+                <label for="{{getCssClass}}nas_pass">{{#_TT}}{{getCssClass}}PasswordLubel{{/_TT}}</label>
+                <input data-field="password" type="password" placeholder="{{#_TT}}{{getCssClass}}PasswordPlaceholder{{/_TT}}" id="{{getCssClass}}nas_pass" />
+            </div>
+            <div class="kilob">
+                {{#_TT}}{{getCssClass}}PasswordHint{{/_TT}}                    
+            </div>
+            <div class="kiloa">
+                <input type="checkbox" data-field="spam" data-fielddefault="1" id="{{getCssClass}}Spam" />
+                <label for="{{getCssClass}}Spam">{{#_TT}}{{getCssClass}}SpamLabel{{/_TT}}</label>
+            </div>
+        </div>
+        <div class="{{getCssClass}}footer">
+            <div class="pay_btn btn" id="{{getCssClass}}Save" data-command="save">{{#_TT}}{{getCssClass}}SaveButton{{/_TT}}</div>
+        </div>
+    </div>
+</div>

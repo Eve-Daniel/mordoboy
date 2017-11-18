@@ -1,0 +1,23 @@
+<!-- div class="{{getCssClass}}ExcersizeBlock" data-command="showExcersize" data-id="{{id}}" data-retid="{{get_chapter_id}}">
+    <div class="{{getCssClass}}ImageWrapper">
+        <img src="{{#mkurl}}/ImageFly/EXC/N{{id}}/600_450.png{{/mkurl}}" />
+    </div>
+    <div class="{{getCssClass}}ExcersizeName">
+        <span class="{{getCssClass}}ExcersizeNameInner">{{#_TT}}{{getCssClass}}ExcersizeText{{/_TT}} {{excnum}}. {{name}}</span>
+    </div>
+    <div class="{{getCssClass}}GoTo">{{#_TT}}{{getCssClass}}GoToText{{/_TT}}</div>
+</div -->
+
+
+<!-- div class="{{getCssClass}}Inner">
+    <div class="{{getCssClass}}Header" data-role="chptitle">{{{data.chapter.name}}}</div>    
+    <div class="{{getCssClass}}Intro" data-role="intro">{{{data.chapter.info}}}</div>    
+    <div class="{{getCssClass}}Excerizes">
+        {{#data.excersizes}}
+        {{>excersize}}
+        {{/data.excersizes}}
+        {{^data.excersizes}}
+        <div class="{{getCssClass}}ExcersizeError">{{#_TT}}{{getCssClass}}NoExcersizes{{/_TT}}</div>
+        {{/data.excersizes}}
+    </div>
+</div -->

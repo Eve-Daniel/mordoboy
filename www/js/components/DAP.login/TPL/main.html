@@ -1,0 +1,46 @@
+<div class="EFOFullScreen {{getCssClass}}__moderegister {{getCssClass}}login_signin" id="{{getCssClass}}login_signin">
+    <div class="container">        
+        <p class="{{getCssClass}}reg_text {{getCssClass}}RegisterOnlyVis">{{#_TT}}{{getCssClass}}reg_text{{/_TT}}</p>
+        <form  data-role="form" class="{{getCssClass}}RegisterForm">
+            <div class="input_fielda {{getCssClass}}RegisterOnly">
+                <label for="a{{MD}}name">{{#_TT}}{{getCssClass}}FieldNameLabel{{/_TT}}</label>
+                <input type="text" data-field="name" id="a{{MD}}name" placeholder="{{#_TT}}{{getCssClass}}FieldNamePlaceholder{{/_TT}}">
+            </div>
+            <div class="input_fielda">
+                <label for="a{{MD}}email">{{#_TT}}{{getCssClass}}FieldEmailLabel{{/_TT}}</label>
+                <input type="email" data-field="email" id="a{{MD}}email" placeholder="{{#_TT}}{{getCssClass}}FieldEmailPlaceholder{{/_TT}}">
+            </div>
+            <div class="input_fielda">
+                <label for="a{{MD}}pass">{{#_TT}}{{getCssClass}}FieldPasswordLabel{{/_TT}}</label>
+                <input type="password" data-field="password" id="a{{MD}}pass" placeholder="{{#_TT}}{{getCssClass}}FieldPasswordPlaceholder{{/_TT}}">
+            </div>
+            <div class="input_fieldb {{getCssClass}}RegisterOnly">
+                <input type="checkbox" data-field="agreement" id="a{{MD}}agreement" class="filled-in" data-fielddefault="1">
+                <label for="a{{MD}}agreement">{{#_TT}}{{getCssClass}}AgreementBeforeLink{{/_TT}} <a data-command="agreement" href="#">{{#_TT}}{{getCssClass}}AgreementLinkText{{/_TT}}</a> {{#_TT}}{{getCssClass}}AgreementAfterLink{{/_TT}}</label>
+            </div>
+            <div class="input_fieldb {{getCssClass}}RegisterOnly">
+                <input type="checkbox" data-field="subscribe" id="a{{MD}}subscribe" class="filled-in"  data-fielddefault="1">
+                <label for="a{{MD}}subscribe">{{#_TT}}{{getCssClass}}SubscribeLabel{{/_TT}}</label>
+            </div>
+            <div class="input_fieldc {{getCssClass}}RegisterOnly">
+                <a href="#" data-command="doRegister" class="{{getCssClass}}btn">{{#_TT}}{{getCssClass}}RegisterButton{{/_TT}}</a>
+            </div>
+            <div class="input_fieldc {{getCssClass}}LoginOnly">
+                <a href="#" data-command="doLogin" class="{{getCssClass}}btn">{{#_TT}}{{getCssClass}}LoginButton{{/_TT}}</a>
+            </div>
+        </form>
+        <div class="{{getCssClass}}IHaveLoginLink">
+            <a href="#" class="{{getCssClass}}RegisterOnly" data-command="setMode" data-mode="login">{{#_TT}}{{getCssClass}}IHaveLogin{{/_TT}}</a>
+            <a href="#" class="{{getCssClass}}LoginOnly" data-command="setMode" data-mode="register">{{#_TT}}{{getCssClass}}INotHaveLogin{{/_TT}}</a>
+            <a href="#" class="{{getCssClass}}LoginOnly {{getCssClass}}ForgotLink" data-command="forgotPassword">{{#_TT}}{{getCssClass}}AForgotPassword{{/_TT}}</a>
+        </div>
+    </div>
+    <div class="container {{getCssClass}}AgreementContainer" style="display:none;" data-role="awindow">
+        <div class="{{getCssClass}}AgreementHeader" data-role="aheader">{{#_TT}}{{getCssClass}}AgreementTitle{{/_TT}}</div>
+        <div class="{{getCssClass}}AgreementContent" data-role="acontent"></div>
+        <div class="EFOWindowLoader {{getCssClass}}AgreeLoader" data-role="aloader"></div>
+        <div class="{{getCssClass}}AgreementFooter">
+            <div class="{{getCssClass}}AgreementButton" data-command="closeAgreement">{{#_TT}}{{getCssClass}}AgreementButton{{/_TT}}</div>
+        </div>
+    </div>
+</div>

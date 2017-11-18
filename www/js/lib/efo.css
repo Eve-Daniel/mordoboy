@@ -1,0 +1,582 @@
+/*=====GENERATING: 19.07.2017 20:27:42=======*/
+/*========== INCLUDE utils/DnDManager========*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07.04.2017, 13:38:20
+    Author     : alexander
+*/
+
+.EFODragHelper{
+    width:3em;height:3em;overflow:hidden;position:absolute;
+    border-radius: 50%;    
+    background-color:rgba(0,0,0,.3);
+    box-sizing: border-box;
+    padding:.5em;
+}
+.EFODragHelper svg{
+    width:100%;height:100%;
+    fill:yellow;
+}
+
+body.EFODragNow{
+    cursor:pointer;
+}
+.EFODropTarget{
+    transition:transform .3s;
+}
+.EFODragNow .EFODropTarget.EFODragOver{
+    transform-origin: left center;
+    transform:scale(1.5);
+}
+/*========== INCLUDE windowController========*/
+.EFOBackdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 5;
+}
+
+.EFOWindow {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 10%;
+    min-height: 10%;
+    box-sizing: border-box;
+    padding: 2em 0 4em 0;
+    background: white;
+    border: 1px solid silver;
+    box-shadow: 3px 3px 10px #525151;
+}
+
+.EFOTitle {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2em;
+    max-height: 2em;
+    line-height: 2em;
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+    background: #00acc8;
+    padding: 0 2em 0 1em;
+}
+
+span.EFOTitleText {
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 1.1em;
+}
+
+.EFOTitleClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.5em;
+    height: 1.5em;
+    margin: .25em .25em 0 0;
+    cursor: pointer;
+    transition: all .3s;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.EFOTitleClose:hover{
+    border-radius:0;    
+}
+
+.EFOTitleClose:before,.EFOTitleClose:after{
+    content:' ';display:block;position:absolute;width:2px;margin-left:-1px;height:150%;left:50%;top:-25%;box-sizing:border-box;
+    border-left:2px solid white;
+}
+.EFOTitleClose:before{
+    transform:rotate(-45deg);
+}
+
+.EFOTitleClose:after{
+    transform:rotate(45deg);
+}
+
+
+
+.EFOFooter {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4em;
+    max-height: 4em;
+    background: white;
+    width: 100%;
+    line-height: 4em;
+    box-sizing: border-box;
+    text-align: right;
+    border-top: 1px solid #00acc8;
+    padding: 0 1em;
+}
+
+.EFOFooterButton {
+    line-height: 2em;
+    padding: 0 1.5em;
+    border: 1px solid #00acc8;
+    display: inline-block;
+    color: #00acc8;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.EFOFooterButton:hover{
+    color:white;
+    background:#00acc8;
+}
+
+.EFOWindowContent {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.EFOWindowLoader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    display: none;
+}
+.EFOWindowLoader:before,.EFOWindowLoader:after{
+    content:' ';position:absolute;
+    top:50%;left:50%;width:10em;height:10em;
+    margin:-5em 0 0 -5em;
+    border:.5em solid #00acc8;border-radius:50%;
+
+}
+.EFOWindowLoader:before{
+    border-top:.5em solid transparent;border-bottom:.5em solid transparent;
+    animation:EFOWindowLoader linear .9s infinite alternate;
+}
+
+.EFOWindowLoader:after{
+    border-left:.5em solid transparent;border-right:.5em solid transparent;
+    animation:EFOWindowLoader linear .9s infinite alternate-reverse;
+}
+
+
+@keyframes EFOWindowLoader{
+    from{transform:rotate(0deg) scale(1.0);}
+    to{transform:rotate(360deg) scale(0.5);}
+}
+
+
+.EFOWindowResizer{
+    width: 1em;height: 1em;position:absolute;
+    right: 0;bottom: 0;cursor: nwse-resize;
+    background: linear-gradient(to bottom right, transparent 49%,transparent 50%,#00acc8 55%,#00acc8 56%,transparent 57%,transparent 64%,transparent 65%,#00acc8 70%,#00acc8 71%,transparent 72%,transparent 80%,transparent 81%,#00acc8 82%,#00acc8 84%,#00acc8 85%,transparent 86%,transparent 87%,transparent 94%,transparent 95%,#00acc8 96%);
+}
+/*========== INCLUDE flatController========*/
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05.07.2017, 12:44:38
+    Author     : alexander
+*/
+
+.EFOFlatControllerWraper {
+    display: block;
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+/*========== INCLUDE widgets/paginator========*/
+.widgetPaginatorHBtn {
+    width: 1.8em;
+    height: 1.8em;
+    display: inline-block;
+    line-height: 1.8em;
+    background: #00acc8;
+    cursor: pointer;
+    position: relative;
+    margin-left:.5em;
+    margin-right:.5em;
+    overflow:hidden;
+    vertical-align:middle;
+}
+.widgetPaginatorHBtn.widgetPaginatorPrev:before{
+    position:absolute;
+    box-sizing:border-box;
+    width:80%;height:60%;left:0;top:0;margin:10% 0 0 -10%;
+    border:.7em solid transparent;
+    border-right:.7em solid white;
+    content:' ';
+}
+
+.widgetPaginatorHBtn.widgetPaginatorNext:before{
+    position:absolute;
+    box-sizing:border-box;
+    width:80%;height:60%;left:0;top:0;margin:10% 0 0 35%;
+    border:.7em solid transparent;
+    border-left:.7em solid white;
+    content:' ';
+}
+
+
+span.widgetPaginatorElement {
+    display:inline-block;
+    width:1.8em;
+    height:1.8em;
+    line-height:1.8em;
+    margin-left:.3em;
+    margin-right:.3em;
+    border:1px  solid #00acc8;
+    box-sizing:border-box;
+    vertical-align:middle;
+    color:#00acc8;
+    cursor:pointer;transition:all .3s;
+    overfow:hidden;
+    max-width:1.8em;
+
+}
+
+span.widgetPaginatorElement.widgetPaginatorCurrent {
+    color:white;
+    background:#00acc8;
+}
+
+.widgetPaginatorContent {
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    line-height: 1.8em;
+    vertical-align: middle;
+}
+
+span.widgetPaginatorHBtn.disabled {
+    opacity:.5;cursor:default;
+}
+
+span.widgetPaginatorElement.widgetPaginatorSeparator {
+    border:1px solid transparent;
+}
+/*========== INCLUDE widgets/TreeView========*/
+.widgetTreeView {
+    box-sizing: border-box;
+    padding: 0;
+    height: 100%;
+    max-height: 100%;
+    background: white;    
+    position: relative;
+    overflow: hidden;
+}
+.widgetTreeViewToolbarEnabled{
+    padding-top: 2.5em;    
+}
+
+.widgetTreeViewToolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 2.5em;
+    max-height: 2.5em;
+    box-sizing: border-box;
+    padding: 0 .5em;
+    text-align: right;
+    background:whitesmoke;
+    display:none;
+}
+.widgetTreeViewToolbarEnabled .widgetTreeViewToolbar{
+    display:block;
+}
+
+.widgetTreeViewContent {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding: .3em;
+}
+
+.widgetTreeViewNodeElementName {
+    height: 1.5em;
+    max-height: 1.5em;    
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1.5em;    
+    display:inline-block;
+    width: auto;
+    max-width: 100%;
+    padding:.05em .3em .05em .05em;    
+    cursor:pointer;
+    transition:all .3s;
+    box-sizing: border-box;
+}
+
+span.widgetTreeViewNodeElementIcon {
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: .1em;
+    background: transparent;   
+    box-sizing: border-box;
+    padding: .1em;
+}
+
+span.widgetTreeViewNodeElementText {
+    display: inline-block;
+    line-height: 1.5em;
+    vertical-align: top;
+}
+
+.widgetTreeViewNodeElementNodeBody {
+    box-sizing: border-box;
+    padding-left: 1.5em;
+}
+
+
+.widgetTreeViewNodeElement{
+    white-space:nowrap;
+    overflow:hidden;    
+}
+.widgetTreeViewNodeElementName{
+    display:inline-block;
+    width: auto;
+    max-width: 100%;
+    padding:.05em .3em .05em .05em;
+    height: 1.5em;
+    cursor:pointer;
+    transition:all .3s;
+}
+.widgetTreeViewNodeElementName svg{
+    width:100%;height:100%;fill:#00acc8;
+    transition: all .3s;
+}
+
+.widgetTreeViewNodeElement.widgetTreeViewselected > .widgetTreeViewNodeElementName{
+    color:white;
+    background:#00acc8;
+}
+.widgetTreeViewNodeElement.widgetTreeViewselected > .widgetTreeViewNodeElementName svg{
+    fill:white;
+}
+
+.widgetTreeViewNodeElementStateclosed >.widgetTreeViewNodeElementName > .widgetTreeViewNodeIconExpanded {
+    display:none;
+}
+
+.widgetTreeViewNodeElementStateopened >.widgetTreeViewNodeElementName > .widgetTreeViewNodeIconCollapsed {
+    display:none;
+}
+
+.widgetTreeViewNodeElementStateclosed>.widgetTreeViewNodeElementNodeBody{
+    max-height:0;
+    transform:scaleY(0);
+}
+.widgetTreeViewNodeElementStateopened>.widgetTreeViewNodeElementNodeBody{
+    max-height:none;
+    transform:scaleY(1);
+}
+.widgetTreeViewNodeElementNodeBody{
+    transition:all .1s;
+    transform-origin:top center;
+}
+
+.widgetTreeView,.widgetTreeView div,.widgetTreeView span,.widgetTreeView p,.widgetTreeView i,.widgetTreeView b,.widgetTreeView svg{
+    user-select:none;
+    -o-user-select:none;
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -khtml-user-select:none;
+    -webkit-user-select:none;
+}
+
+
+.widgetTreeViewCommandButton {
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 2em;
+    border: 1px solid #00acc8;
+    height: 2em;
+    display: inline-block;
+    margin-top: .25em;
+    cursor: pointer;
+    transition: all .3s;
+    padding: .3em;
+    line-height: 0;
+}
+
+.widgetTreeViewCommandButton svg {
+    width: 100%;
+    height: 100%;
+    fill: #00acc8;
+}
+
+.widgetTreeViewCommandButton:hover {
+    background: #00acc8;
+}
+
+.widgetTreeViewCommandButton:hover svg {
+    fill: white;
+}
+
+
+/*========== INCLUDE widgets/contextMenu========*/
+.widgetcontextMenu {
+    position: absolute;
+    z-index: 10;
+    box-sizing: border-box;
+    padding: .5em;
+    max-height: 50%;
+    padding-right: 0;
+    overflow: hidden;
+    max-width: 50%;
+    left: 0;
+    top: 0;
+    background: white;
+    border: 1px solid silver;
+    box-shadow: 3px 3px 10px darkgrey;
+}
+
+.widgetcontextMenuContent {
+    box-sizing: border-box;
+    max-height: 100%;
+    overflow: auto;
+    padding-right: .3em;
+    max-width:100%;
+}
+
+ul.widgetcontextMenuList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width:100%;box-sizing:border-box;
+
+}
+
+ul.widgetcontextMenuList li {
+    white-space: nowrap;
+    overflow: hidden;
+    height: 2em;
+    max-height: 2em;
+    border-bottom: 1px solid whitesmoke;
+    display: list-item;
+    max-width:100%;
+    position:relative;
+    padding-left:2em;
+    cursor:pointer;transition:all .3s;
+}
+ul.widgetcontextMenuList li:hover{
+    background: whitesmoke;
+}
+
+span.widgetcontextMenuItemIcon {
+    width: 1.5em;
+    height: 1.5em;
+    overflow: hidden;
+    display: inline-block;
+    position:absolute;
+    left:.25em;top:.25em;
+}
+
+span.widgetcontextMenuItemIcon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/*========== INCLUDE Tabbable========*/
+.EFOTabbableContainer {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    padding-top: 2em;
+}
+
+.EFOTabheaderContainer {
+    box-sizing: border-box;
+    height: 2em;
+    max-height: 2em;
+    overflow: hidden;
+    line-height: 2em;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: whitesmoke;
+}
+
+.EFOTabheader {
+    float: left;
+    padding: 0 1em;
+    color: white;
+    background: #00acc8;
+    border-left: 2px solid whitesmoke;
+    border-top: 1px solid whitesmoke;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.EFOTabheader:nth-child(1) {
+    border-left: none;
+}
+
+.EFOTabheader:hover {
+    color: #00acc8;
+    background: silver;
+}
+
+.EFOTabsContainer {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.EFOTabBody {
+    display: none;
+}
+
+.EFOTabBody{
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.EFOTabheader.EFOTabHeaderActive,
+.EFOTabheader.EFOTabHeaderActive:hover {
+    color: #00acc8;
+    background: white;
+}
+
+.EFOTabBody.EFOTabActive {
+    display: block;
+}

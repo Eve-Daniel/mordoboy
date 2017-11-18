@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 15, 2017, 1:17:39 AM
+    Author     : eve
+*/
+
+#appContent .EFOFlatControllerWraper.FlatControllerVideoSliderWrapper {
+    position: static;
+}
+
+.VideoSliderowWrapper {
+    display: none;
+}
+
+.VideoSliderowWrapper.VideoSliderActiveImage {
+    display: block;
+}
+
+.VideoSliderowWrapper video {
+    width: 100%;
+}
+
+.VideoSliderimapInner {
+    position: relative;
+}
+
+.VideoSliderNavigationBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.VideoSliderArrow {
+    width: 2.5em;
+    height: 2.5em;
+    /* background: yellow; */
+    position: absolute;
+    top: 50%;
+    margin-top: -1.25em;
+    cursor: pointer;
+    z-index: 11;
+}
+
+.VideoSliderArrow svg {
+    width: 100%;
+    height: 100%;
+    fill: #760000;
+}
+
+.VideoSliderArrow.VideoSliderArrowLeft {
+    left: 0;
+    transform: rotate(90deg);
+}
+
+.VideoSliderArrow.VideoSliderArrowRight {
+    right: 0;
+    transform: rotate(-90deg);
+}
+
+.VideoSlidervideoSlowSwitch {
+    text-align: center;
+    margin: .3em 0;
+}
+
+.VideoSlidervideoSlowSwitch label:after,.VideoSlidervideoSlowSwitch label:before{
+    display:none;
+}
+.VideoSlidervideoSlowSwitch label {
+    color:#760000;
+    line-height:2.5em;
+    height:2.5em;
+    border:1px solid #760000;
+    padding:0 .5em;
+    cursor:pointer;
+    transition:all .3s;
+
+}
+
+.VideoSlidervideoSlowSwitch input[type=checkbox]:checked+label{
+    color:white;
+    background:#760000;
+    
+} 
+
+.VideoSliderPreloader {
+    text-align: center;
+    height: 7em;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.VideoSliderPreloader svg {
+    width: 100%;
+    height: 100%;
+}
+

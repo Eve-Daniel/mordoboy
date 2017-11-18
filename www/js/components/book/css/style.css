@@ -1,0 +1,167 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 21, 2017, 10:26:54 PM
+    Author     : eve
+*/
+
+.BookOuter {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: .5em;
+    padding-right: 0;
+    height: 100%;
+    max-height: 100%;
+}
+
+.BookWrapper {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+    padding-right: .5em;
+}
+
+.BookSection {
+    padding: .5em 0;
+    box-sizing: border-box;
+}
+
+.SectionHeader {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.BookChapter {
+    float: left;
+    box-sizing: border-box;
+    width: 32%;
+}
+
+.BookSectionContent {
+    overflow: hidden;
+    padding-bottom: 1em;
+}
+
+.BookChapter {
+    margin-left: .6%;
+    margin-right: .6%;
+}
+
+.BookChapterPict {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.BookChapterPict img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.BookChapterPict {
+    padding: .2em;
+    /* border: 1px solid silver; */
+}
+
+.BookChapter {
+    padding: .2em;
+    border: 1px solid silver;
+    border-radius: 3%;
+    box-shadow: 3px 3px 10px silver;
+}
+
+.BookChapterName {
+    padding: .2em;
+}
+
+.BookchapterPrice {
+    padding: .2em;
+    font-weight: bold;
+    margin: .3em 0;
+}
+
+
+span.BookBoughtLabel {
+    width: 1.1em;
+    height: 1.1em;
+    overflow: hidden;
+    display: inline-block;
+}
+
+span.BookBoughtLabel svg {
+    width: 100%;
+    height: 100%;
+    fill: green;
+}
+
+.BookchapterPrice {
+    text-align: right;
+    padding-right: .7em;
+}
+
+.BookChapter {
+    cursor: pointer;
+}
+
+.BookchapterPrice {
+    color: #760000;
+}
+@media all AND (max-width:450px){
+    .BookChapter{
+        width:45%;
+        margin-left:2.5%;
+        margin-right: 2.5%;
+    }
+}
+
+.BookallowByAll .BookWrapper {}
+
+.BookallowByAll .BookOuter {
+    padding-bottom: 5em;
+}
+
+.BookByAllButtonW {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    height: 5em;
+    box-sizing: border-box;
+    line-height: 4em;
+    width: 100%;
+    padding: .5em;
+}
+
+.BookByAllAccess {
+    cursor: pointer;
+    font-size: 1.4em;
+    background: #760000;
+    color: white;
+    cursor: pointer;
+}
+
+.BookByAllButtonW {
+    display: none;
+}
+
+div#EFOControllercontroller3 {}
+
+.BookallowByAll .BookByAllButtonW {
+    display: block;
+}
+
+.BookChapter {
+    max-width: 300px;
+}
+
+.BookChapterPict img {
+    width: 100%;
+}
+
+.price_card {
+    display: none;
+}

@@ -1,0 +1,20 @@
+.AboutOuter {
+    box-sizing: border-box;
+    padding: 1em;
+    padding-right: 0;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.AboutWrapper {
+    height: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+    padding-right: 1em;
+    overflow: auto;
+}
+
+div#AboutNewsWrapper>h4 {
+    font-size: 1.7em;
+}

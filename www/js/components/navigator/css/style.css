@@ -1,0 +1,138 @@
+.NavigatorIntro p {
+    margin: 0;
+}
+
+.NavigatorEmpty {
+    text-align: center;
+    color: white;
+    background: crimson;
+    line-height: 2.5em;
+}
+
+.NavigatorInnerWrapper {}
+
+.NavigatorWrapepr {
+    box-sizing: border-box;
+    padding: 0 .5em;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.NavigatorInnerWrapper {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+.NavigatorInnerWrapper>.container {
+    margin: 0;
+    width: 100%;
+}
+
+.NavigatorInnerWrapper .row {
+    margin: 0;
+}
+
+.NavigatorEmptyActionButton {}
+
+.NavigatorEmptyActions {
+    overflow: hidden;
+    margin-top: 2em;
+}
+
+.NavigatorEmptyActionButton {
+    float: left;
+    width: 48%;
+    margin: 0 1%;
+    box-sizing: border-box;
+    padding:  0 .1em;
+    overflow: hidden;
+    border: 1px solid #760000;
+    line-height: 2.5em;
+    cursor: pointer;
+    color: #760000;
+    transition: all .3s;
+    text-align:center;
+}
+
+.NavigatorEmptyActionButton:hover {
+    color: white;
+    background: #760000;
+}
+
+.EFOWindowContent.NavigatorWindowContent {
+    user-select: none;
+}
+
+.NavigatorItemRow {
+    /* height: 4em; */
+    overflow: hidden;
+}
+
+.NavigatorItemRowImage {
+    width: 5em;
+    border-radius: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+    border: 3px solid silver;
+    line-height: 0;
+}
+
+.NavigatorItemRowImage img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.NavigatorItemRow {
+    overflow: hidden;
+    vertical-align: middle;
+    border-bottom: 1px solid whitesmoke;
+    padding: .3em 0;
+}
+
+.NavigatorItemRowImage {
+    float: left;
+    vertical-align: middle;
+}
+
+.NavigatorChapterName {
+    box-sizing: border-box;
+    margin-left: 5em;
+    padding: .1em 1em;
+    vertical-align: middle;
+    height: 5em;
+}
+
+.NavigatorChapterName:before {
+    content: ' ';
+    display: inline-block;
+    width: 0px;
+    height: 5em;
+    vertical-align: middle;
+}
+span.NavigatorNameInner {
+    display: inline-block;
+    max-height: 4.5em;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    white-space: normal;
+    vertical-align: middle;
+}
+
+
+.NavigatorItemRow {
+    overflow: hidden;
+    vertical-align: middle;
+    border-bottom: 1px solid #ded8d8;
+    padding: .3em 0;
+    cursor:pointer;
+}
+
+.NavigatorItemRowImage {
+    height: 5em;
+}

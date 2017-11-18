@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 24, 2017, 1:10:54 PM
+    Author     : eve
+*/
+
+.PreferencesWrapper {
+    box-sizing: border-box;
+    padding: .5em;
+    padding-right: 0;
+    padding-bottom: 4em;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+div#Preferencesnas_open {
+    box-sizing: border-box;
+    height: 100%;
+    max-height: 100%;
+    padding-right: .5em;
+    overflow: auto;
+}
+
+.PreferencesWrapper select {
+    display: block;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    -webkit-appearance: none;
+    width: 100%;
+    outline: 1px solid silver;
+}
+
+.Preferencesfooter {
+    position: absolute;
+    bottom: 0;
+    height: 4em;
+    box-sizing: border-box;
+    text-align: center;
+    padding-right: .5em;
+    width: 100%;
+    /* line-height: 4em; */
+    padding-top: .5em;
+}
+
+.PreferencesWrapper .kilob {
+    margin-bottom: 1.5em;
+}

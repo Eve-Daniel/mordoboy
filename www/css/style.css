@@ -1,0 +1,57 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 20, 2017, 9:28:49 PM
+    Author     : eve
+*/
+
+div#boxapp {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+html,body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+div#appContent {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+}
+
+div#appLoader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+
+div#appContent .EFOFlatControllerWraper {
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div#appContent {
+    position: relative;
+}
+
+div#appContent .EFOFlatControllerWraper {
+    width: 100%;
+}
+

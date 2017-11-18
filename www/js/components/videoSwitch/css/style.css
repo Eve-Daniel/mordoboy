@@ -1,0 +1,225 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 14, 2017, 10:45:55 PM
+    Author     : eve
+*/
+
+#appContent .EFOFlatControllerWraper.FlatControllerVideoSwitchWrapper {
+    position: relative;
+}
+
+.VideoSwitchowWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+}
+.VideoSwitchowWrapper video{
+    width:100%;
+}
+
+
+
+.VideoSwitchimapInner {
+    position: relative;
+}
+
+.VideoSwitchNavigationBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 2em;
+}
+
+.VideoSwitchNavigationBlock .VideoSwitchArrow {
+    width: 1.5em;
+    height: 1.5em;
+    -qqq-background: yellow;
+    position: absolute;
+    animation: blikers .8s linear alternate infinite;
+    cursor:pointer;
+    /* display: block!important; */
+    z-index: 11;
+}
+
+.big_image_block.VideoSwitchTrainingViewVideo {
+    font-size: inherit;
+}
+
+@keyframes blikers{
+
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;   
+    }
+
+}
+
+.VideoSwitchArrow svg{
+    width:100%;
+    height:100%;
+    fill:#760000;
+
+}
+
+.VideoSwitchArrow.VideoSwitchArrowTonnm1 {
+    top: 0;
+    left: 50%;
+    margin-left: -.75em;
+    transform: rotate(-180deg);
+}
+
+.VideoSwitchArrow.VideoSwitchArrowTop1m1 {
+    top: -.3em;
+    right: -.3em;
+    transform: rotate(-135deg);
+}
+
+.VideoSwitchArrow.VideoSwitchArrowTom1nn {
+    left: 0;
+    top: 50%;
+    transform: rotate(90deg);
+    margin-top: -.75em;
+}
+
+.VideoSwitchArrow.VideoSwitchArrowTop1nn {
+    top: 50%;
+    right: 0;
+    margin-top: -.75em;
+    transform: rotate(-90deg);
+}
+
+.VideoSwitchArrow.VideoSwitchArrowTom1p1 {
+    left: -.3em;
+    bottom: 0;
+    transform: rotate(45deg);
+}
+
+.VideoSwitchArrow.VideoSwitchArrowTonnp1 {
+    bottom: 0;
+    left: 50%;
+    margin-left: -.75em;
+}
+
+.VideoSwitchArrow.VideoSwitchArrowTop1p1 {
+    bottom: -.0em;
+    right: -.3em;
+    transform: rotate(-45deg);
+}
+
+.VideoSwitchArrow.VideoSwitchArrowTom1m1 {
+    top: -.3em;
+    left: -.3em;
+    transform: rotate(135deg);
+}
+
+
+.VideoSwitchVideoRightDown .VideoSwitchowWrapper[data-textid="RightDown"] {
+    display: block;
+}
+
+
+.VideoSwitchVideoMiddleDown .VideoSwitchowWrapper[data-textid="MiddleDown"] {
+    display: block;
+}
+
+
+
+.VideoSwitchVideoLeftDown .VideoSwitchowWrapper[data-textid="LeftDown"] {
+    display: block;
+}
+
+
+.VideoSwitchVideoRightMiddle .VideoSwitchowWrapper[data-textid="RightMiddle"] {
+    display: block;
+}
+
+
+.VideoSwitchVideoRightUp .VideoSwitchowWrapper[data-textid="RightUp"] {
+    display: block;
+}
+
+.VideoSwitchVideoLeftUp .VideoSwitchowWrapper[data-textid="LeftUp"] {
+    display: block;
+}
+
+.VideoSwitchVideoMiddleUp .VideoSwitchowWrapper[data-textid="MiddleUp"] {
+    display: block;
+}
+
+
+
+.VideoSwitchVideoLeftMiddle .VideoSwitchowWrapper[data-textid="LeftMiddle"] {
+    display: block;
+}
+
+.VideoSwitchVideoMiddleMiddle .VideoSwitchowWrapper[data-textid="MiddleMiddle"] {
+    display: block;
+}
+
+
+.VideoSwitchvideoSlowSwitch label {
+    display: inline-block;
+    line-height:2.5em;
+    color:#760000;
+    border:1px solid #760000;
+    margin:0;padding:0 .5em;
+    position:static;
+    height:2.5em;
+    transition:all .3s;
+}
+.VideoSwitchvideoSlowSwitch input[type=checkbox]:checked+label{
+    background:#760000;
+    color:white;
+}
+
+.VideoSwitchvideoSlowSwitch label:before,.VideoSwitchvideoSlowSwitch label:after {
+    display:none;
+}
+
+.VideoSwitchvideoSlowSwitch{
+    text-align:center;    
+}
+
+.FilteredViewTab.FilteredViewopened {}
+
+.FilteredViewTab.FilteredViewopened+.FilteredViewTab .FilteredViewTabHeader {
+    border-top:1px solid silver;
+}
+
+.VideoSwitchvideoSlowSwitch {
+    margin: .3em 0;
+}
+
+.VideoSwitchPreloader {
+    text-align: center;
+    height: 7em;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+.VideoSwitchPreloader svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+.VideoSwitchPleaseSelect {
+    line-height: 3em;
+    background: crimson;
+    color: white;
+    text-align: center;
+}
+
+
+video.VideoSwitchPlaying {
+    box-sizing: border-box;
+    border: 3px solid red;
+}

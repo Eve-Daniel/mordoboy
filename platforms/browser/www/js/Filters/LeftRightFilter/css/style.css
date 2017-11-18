@@ -1,0 +1,54 @@
+#appContent .EFOFlatControllerWraper.FlatControllerLeftRightFilterWrapper {
+    position: static;
+    padding: .5em;
+}
+
+.LeftRightFilterFilterClassContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.LeftRightFilterXFilterZone {
+    width: 40%;
+    overflow: hidden;
+    margin: 0 .5em;
+    color: #760000;
+    border: 1px solid #760000;
+    display: block;
+    line-height: 2.5em;
+    box-sizing: border-box;
+    padding: 0 .5em;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.LeftRightFilterXFilterZone:hover {
+    color: white;
+    background: #760000;
+}
+
+.LeftRightFilterXFilterZone.LeftRightFilterHilighted {
+    background: #760000;
+    color: white;
+}
+
+.LeftRightFilterFilterClassContent {
+    flex-wrap: wrap;
+}
+
+.LeftRightFilterXFilterZone {
+    margin-bottom: .5em;
+}
+
+.LeftRightFilterXFilterZone.LeftRightFilterActiveMarkerdisabled,
+.LeftRightFilterXFilterZone.LeftRightFilterActiveMarkerdisabled:hover {
+    color: darkgray;
+    border-color: darkgray;
+    background: transparent;
+    display:none;
+}
+
+.LeftRightFilterXFilterZone {
+    text-align: center;
+}

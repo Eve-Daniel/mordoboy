@@ -1,0 +1,24 @@
+
+<div class="container">
+    <div class="{{getCssClass}}Header" data-role="chptitle">{{{data.chapter.name}}}</div>    
+    <div class="{{getCssClass}}Intro" data-role="intro">{{{data.chapter.info}}}</div>    
+    {{#hasSubChapters}}
+    <div class="row">
+        {{#data.subchapters}}
+        {{>subchapter}}
+        {{/data.subchapters}}
+    </div>
+    {{/hasSubChapters}}
+    <div class="row">
+        {{#data.excersizes}}
+        {{>excersize}}
+        {{/data.excersizes}}       
+    </div>
+    {{^data.subchapters}}
+    {{^data.excersizes}}
+    {{>Empty}}
+    {{/data.excersizes}}
+    {{/data.subchapters}}
+
+
+</div>  

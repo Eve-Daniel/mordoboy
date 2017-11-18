@@ -1,0 +1,47 @@
+<div class="{{getCssClass}}MainMenu">
+    <div class="{{getCssClass}}MenuHeaderPart">
+        <div class="{{getCssClass}}MenuHeaderContent">
+            <div class="{{getCssClass}}MenuHeaderLogo">
+                <i class="mdi mdi-account"></i>
+            </div>
+            <div class="{{getCssClass}}HeaderUserDisplay" data-role="userDisplay"></div>
+            <div class="{{getCssClass}}HeaderBrandDisplay" data-role="emailDisplay"></div>            
+        </div>
+        <div class="EFOWindowLoader {{getCssClass}}WindowLoader" data-role="loader"></div>
+    </div>
+    <div class="{{getCssClass}}MenuItemsPart">
+        <ul class="{{getCssClass}}MenuList">
+            <li id="enc" data-command="menuitem" data-menucommand="showBook">
+                <div class="{{getCssClass}}Image">
+                    <svg ><use xlink:href="#{{getCssClass}}MIBook"/></svg>
+                </div>
+                <span>{{#_TT}}{{getCssClass}}ItemEnciclopedy{{/_TT}}</span></li>
+            <li id="nas" data-command="menuitem" data-menucommand="showPrefs">
+                <div class="{{getCssClass}}Image">
+                    <svg ><use xlink:href="#{{getCssClass}}MIPrefs"/></svg>
+                </div>
+                <span>{{#_TT}}{{getCssClass}}ItemPreferences{{/_TT}}</span></li>
+            <li id="nov" data-command="menuitem" data-menucommand="showNews">
+                <div class="{{getCssClass}}Image">
+                    <svg ><use xlink:href="#{{getCssClass}}MINews"/></svg>
+                </div>
+                <span>{{#_TT}}{{getCssClass}}ItemNews{{/_TT}}</span></li>
+            <li id="abo" data-command="menuitem" data-menucommand="showAbout">
+                <div class="{{getCssClass}}Image">
+                    <svg ><use xlink:href="#{{getCssClass}}MIAbout"/></svg>
+                </div>
+                <span>{{#_TT}}{{getCssClass}}ItemAbout{{/_TT}}</span></li>
+            <li id="exi" data-command="menuitem" data-menucommand="runQr">
+                <div class="{{getCssClass}}Image">
+                    <svg ><use xlink:href="#{{getCssClass}}MIQR"/></svg>
+                </div>
+                <span>{{#_TT}}{{getCssClass}}ItemQr{{/_TT}}</span></li>            
+            <li id="exi" data-command="menuitem" data-menucommand="runExit">
+                <div class="{{getCssClass}}Image">
+                    <svg ><use xlink:href="#{{getCssClass}}MIExit"/></svg>
+                </div>
+                <span>{{#_TT}}{{getCssClass}}ItemExit{{/_TT}}</span></li>            
+            
+        </ul>
+    </div>
+</div>

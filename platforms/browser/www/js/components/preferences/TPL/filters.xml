@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <property in="email" filters="Strip,Trim,NEString,EmailMatch" />
+    <property in="name" filters="Strip,Trim,NEString" />
+    <property in="spam" filters="Boolean,DefaultTrue" />
+    <property in="password" filters="Trim,NEString,DefaultNull"/>    
+</root>
